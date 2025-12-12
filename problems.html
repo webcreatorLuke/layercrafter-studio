@@ -6,131 +6,53 @@
     <title>LayerCraft Studio – Problems</title>
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
-        }
-
-        header {
-            background: #111;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        nav {
-            background: #222;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        .content {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-
-        .problem {
-            padding: 15px;
-            background: #eee;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
-
-        .problem:hover {
-            background: #ddd;
-        }
-
-        .fix {
-            display: none;
-            padding: 15px;
-            background: #fafafa;
-            border-left: 4px solid #0070f3;
-            margin-top: 10px;
-            border-radius: 6px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background: #111;
-            color: white;
-        }
+        body { margin: 0; font-family: Arial; background: #f5f5f5; color: #222; }
+        header { background: #111; color: white; padding: 20px; text-align: center; font-size: 28px; }
+        nav { background: #222; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-size: 18px; }
+        nav a:hover { text-decoration: underline; }
+        .content { max-width: 900px; margin: 40px auto; background: white; padding: 30px; border-radius: 12px; }
+        .problem { padding: 15px; background: #eee; border-radius: 8px; margin-bottom: 15px; cursor: pointer; }
+        .problem:hover { background: #ddd; }
+        .fix { display: none; padding: 15px; background: #fafafa; border-left: 4px solid #0070f3; margin-top: 10px; }
+        footer { text-align: center; padding: 20px; background: #111; color: white; margin-top: 40px; }
     </style>
 </head>
 
 <body>
 
-<header>
-    LayerCraft Studio – Problems
-</header>
+<header>LayerCraft Studio – Problems</header>
 
 <nav>
     <a href="index.html">Home</a>
     <a href="problems.html">Problems</a>
     <a href="parts.html">Parts</a>
-    <a href="filimate.html">Filimates</a>
+    <a href="filimate.html">Filimate</a>
 </nav>
-
 
 <div class="content">
     <h1>Common 3D Printing Problems</h1>
-    <p>Click a problem to see how to fix it.</p>
 
-    <div class="problem" onclick="toggleFix('fix1')"><strong>1. Filament Clog</strong></div>
-    <div class="fix" id="fix1">
-        Heat nozzle, push filament, cold pull, clean nozzle.
-    </div>
+    <div class="problem" onclick="toggleFix('fix1')">1. Filament Clog</div>
+    <div class="fix" id="fix1">Heat nozzle, push filament, cold pull, clean nozzle.</div>
 
-    <div class="problem" onclick="toggleFix('fix2')"><strong>2. Bed Adhesion Issues</strong></div>
-    <div class="fix" id="fix2">
-        Clean bed, level bed, adjust Z-offset, slow first layer.
-    </div>
+    <div class="problem" onclick="toggleFix('fix2')">2. Bed Adhesion Issues</div>
+    <div class="fix" id="fix2">Clean bed, level bed, adjust Z-offset.</div>
 
-    <div class="problem" onclick="toggleFix('fix3')"><strong>3. Warping</strong></div>
-    <div class="fix" id="fix3">
-        Use heated bed, enclosure, brim/raft.
-    </div>
+    <div class="problem" onclick="toggleFix('fix3')">3. Warping</div>
+    <div class="fix" id="fix3">Use heated bed, enclosure, brim/raft.</div>
 
-    <div class="problem" onclick="toggleFix('fix4')"><strong>4. Layer Shifting</strong></div>
-    <div class="fix" id="fix4">
-        Tighten belts, stabilize printer, reduce speed.
-    </div>
+    <div class="problem" onclick="toggleFix('fix4')">4. Layer Shifting</div>
+    <div class="fix" id="fix4">Tighten belts, stabilize printer.</div>
 
-    <div class="problem" onclick="toggleFix('fix5')"><strong>5. Stringing</strong></div>
-    <div class="fix" id="fix5">
-        Increase retraction, lower temp.
-    </div>
+    <div class="problem" onclick="toggleFix('fix5')">5. Stringing</div>
+    <div class="fix" id="fix5">Increase retraction, lower temp.</div>
 
-    <div class="problem" onclick="toggleFix('fix6')"><strong>6. Under-Extrusion</strong></div>
-    <div class="fix" id="fix6">
-        Check clogs, increase flow, free filament spool.
-    </div>
+    <div class="problem" onclick="toggleFix('fix6')">6. Under-Extrusion</div>
+    <div class="fix" id="fix6">Check clogs, increase flow.</div>
 </div>
 
-<footer>
-    © 2025 LayerCraft Studio — All Rights Reserved
-</footer>
+<footer>© 2025 LayerCraft Studio — All Rights Reserved</footer>
 
 <script>
 function toggleFix(id) {
