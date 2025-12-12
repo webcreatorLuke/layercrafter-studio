@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LayerCraftStudioproblems</title>
+    <title>LayerCraft Studio – Problems</title>
 
     <style>
         body {
@@ -22,6 +22,23 @@
             font-weight: bold;
         }
 
+        nav {
+            background: #222;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         .content {
             max-width: 900px;
             margin: 40px auto;
@@ -32,10 +49,10 @@
         }
 
         .problem {
-            margin-bottom: 20px;
             padding: 15px;
             background: #eee;
             border-radius: 8px;
+            margin-bottom: 15px;
             cursor: pointer;
         }
 
@@ -52,22 +69,6 @@
             border-radius: 6px;
         }
 
-        .back-btn {
-            display: inline-block;
-            margin-top: 30px;
-            background: #0070f3;
-            color: white;
-            padding: 12px 25px;
-            font-size: 18px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .back-btn:hover {
-            background: #0059c9;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -81,91 +82,48 @@
 <body>
 
 <header>
-    LayerCraftStudioproblems
+    LayerCraft Studio – Problems
 </header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="problems.html">Problems</a>
+    <a href="parts.html">Parts</a>
+</nav>
 
 <div class="content">
     <h1>Common 3D Printing Problems</h1>
-    <p>Click a problem below to see how to fix it.</p>
+    <p>Click a problem to see how to fix it.</p>
 
-    <!-- Problem 1 -->
-    <div class="problem" onclick="toggleFix('fix1')">
-        <strong>1. Filament Clog</strong>
-    </div>
+    <div class="problem" onclick="toggleFix('fix1')"><strong>1. Filament Clog</strong></div>
     <div class="fix" id="fix1">
-        <ul>
-            <li>Heat the nozzle to printing temperature.</li>
-            <li>Try manually pushing filament through.</li>
-            <li>Perform a “cold pull.”</li>
-            <li>Clean or replace the nozzle if needed.</li>
-        </ul>
+        Heat nozzle, push filament, cold pull, clean nozzle.
     </div>
 
-    <!-- Problem 2 -->
-    <div class="problem" onclick="toggleFix('fix2')">
-        <strong>2. Bed Adhesion Issues</strong>
-    </div>
+    <div class="problem" onclick="toggleFix('fix2')"><strong>2. Bed Adhesion Issues</strong></div>
     <div class="fix" id="fix2">
-        <ul>
-            <li>Clean the bed with alcohol.</li>
-            <li>Re-level the bed and adjust Z-offset.</li>
-            <li>Use glue stick or hairspray if needed.</li>
-            <li>Print the first layer slower.</li>
-        </ul>
+        Clean bed, level bed, adjust Z-offset, slow first layer.
     </div>
 
-    <!-- Problem 3 -->
-    <div class="problem" onclick="toggleFix('fix3')">
-        <strong>3. Warping</strong>
-    </div>
+    <div class="problem" onclick="toggleFix('fix3')"><strong>3. Warping</strong></div>
     <div class="fix" id="fix3">
-        <ul>
-            <li>Use a heated bed.</li>
-            <li>Increase bed temperature slightly.</li>
-            <li>Use an enclosure to keep heat in.</li>
-            <li>Add a brim or raft.</li>
-        </ul>
+        Use heated bed, enclosure, brim/raft.
     </div>
 
-    <!-- Problem 4 -->
-    <div class="problem" onclick="toggleFix('fix4')">
-        <strong>4. Layer Shifting</strong>
-    </div>
+    <div class="problem" onclick="toggleFix('fix4')"><strong>4. Layer Shifting</strong></div>
     <div class="fix" id="fix4">
-        <ul>
-            <li>Tighten belts on X and Y axes.</li>
-            <li>Ensure printer is on a stable surface.</li>
-            <li>Reduce print speed slightly.</li>
-        </ul>
+        Tighten belts, stabilize printer, reduce speed.
     </div>
 
-    <!-- Problem 5 -->
-    <div class="problem" onclick="toggleFix('fix5')">
-        <strong>5. Stringing</strong>
-    </div>
+    <div class="problem" onclick="toggleFix('fix5')"><strong>5. Stringing</strong></div>
     <div class="fix" id="fix5">
-        <ul>
-            <li>Increase retraction distance.</li>
-            <li>Increase retraction speed.</li>
-            <li>Lower nozzle temperature slightly.</li>
-        </ul>
+        Increase retraction, lower temp.
     </div>
 
-    <!-- Problem 6 -->
-    <div class="problem" onclick="toggleFix('fix6')">
-        <strong>6. Under-Extrusion</strong>
-    </div>
+    <div class="problem" onclick="toggleFix('fix6')"><strong>6. Under-Extrusion</strong></div>
     <div class="fix" id="fix6">
-        <ul>
-            <li>Check for partial nozzle clogs.</li>
-            <li>Increase extrusion multiplier slightly.</li>
-            <li>Ensure filament spool moves freely.</li>
-        </ul>
+        Check clogs, increase flow, free filament spool.
     </div>
-
-    <!-- Back to Home Button -->
-    <a class="back-btn" href="https://webcreatorluke.github.io/layercrafter-studio/">⬅ Back to Home</a>
-
 </div>
 
 <footer>
@@ -173,10 +131,10 @@
 </footer>
 
 <script>
-    function toggleFix(id) {
-        const box = document.getElementById(id);
-        box.style.display = box.style.display === "block" ? "none" : "block";
-    }
+function toggleFix(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
 </script>
 
 </body>
