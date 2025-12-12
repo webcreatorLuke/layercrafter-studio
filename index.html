@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LayerCraft Studio – LayerCrafter1</title>
 
+    <!-- Stripe Buy Button Script -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
     <style>
         body {
             margin: 0;
@@ -71,21 +74,6 @@
             margin-bottom: 20px;
         }
 
-        .buy-btn {
-            display: inline-block;
-            background: #0070f3;
-            color: white;
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: 0.2s;
-        }
-
-        .buy-btn:hover {
-            background: #0059c9;
-        }
-
         footer {
             text-align: center;
             padding: 20px;
@@ -103,7 +91,8 @@
 </header>
 
 <nav>
-    <a href="https://webcreatorluke.github.io/layercrafter-studio/problems.html</a>
+    <a href="index.html">Home</a>
+    <a href="https://webcreatorluke.github.io/layercrafter-studio/problems.html">Problems</a>
 </nav>
 
 <section class="hero">
@@ -117,9 +106,12 @@
     <h2>$200.00 – LayerCrafter1</h2>
     <p>The ultimate 3D printer for creators, makers, and innovators.</p>
 
-    <a class="buy-btn" href="https://buy.stripe.com/00wfZibO83zL7UogIh9MY00" target="_blank">
-        Buy Now
-    </a>
+    <!-- Stripe Buy Button -->
+    <stripe-buy-button
+        buy-button-id="buy_btn_1SdJOfITAHyHaTwn0DyEpEgI"
+        publishable-key="pk_live_51QyN83ITAHyHaTwn9SFArsrZ9s32pPGa0l6MDqdnKiKggltVTzfUpTcRgRk3WGP2eUfx78wFscfDQ7OY4YWJPX9g00qFLmliZ4">
+    </stripe-buy-button>
+
 </section>
 
 <footer>
